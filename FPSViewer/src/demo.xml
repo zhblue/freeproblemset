@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<fps version="1.1" url="http://code.google.com/p/freeproblemset/">
+	<generator name="HUSTOJ" url="http://code.google.com/p/hustoj/"/>
+	<item>
+<title><![CDATA[A+B Problem]]></title>
+<time_limit><![CDATA[1]]></time_limit>
+<memory_limit><![CDATA[10]]></memory_limit>
+
+<img><src><![CDATA[http://127.1:80/JudgeOnline/upload/201009/Screenshot.png]]></src><base64><![CDATA[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]]></base64></img><description><![CDATA[<p>Calculate a+b</p>
+<p><img width="192" height="28" alt="" src="http://127.1:80/JudgeOnline/upload/201009/Screenshot.png" /></p>]]></description>
+<input><![CDATA[<p>Two integer a,b (0&lt;=a,b&lt;=10)</p>]]></input> 
+<output><![CDATA[<p>Output a+b</p>]]></output>
+<sample_input><![CDATA[1 2]]></sample_input>
+<sample_output><![CDATA[3]]></sample_output>
+<test_input><![CDATA[1 2]]></test_input>
+<test_output><![CDATA[3]]></test_output>
+<test_input><![CDATA[1 3]]></test_input>
+<test_output><![CDATA[4]]></test_output>
+<test_input><![CDATA[3 3]]></test_input>
+<test_output><![CDATA[6]]></test_output>
+<hint><![CDATA[<p>Q: Where are the input and the output?  A: Your program shall always <font color="red">read input from stdin (Standard Input) and write output to stdout (Standard Output)</font>. For example, you can use 'scanf' in C or 'cin' in C++ to read from stdin, and use 'printf' in C or 'cout' in C++ to write to stdout.  You <font color="red">shall not output any extra data</font> to standard output other than that required by the problem, otherwise you will get a &quot;Wrong Answer&quot;.  User programs are not allowed to open and read from/write to files. You will get a &quot;Runtime Error&quot; or a &quot;Wrong Answer&quot; if you try to do so.   Here is a sample solution for problem 1000 using C++/G++:</p>
+<pre>
+#include &lt;iostream&gt;
+using namespace std;
+int  main()
+{
+    int a,b;
+    cin &gt;&gt; a &gt;&gt; b;
+    cout &lt;&lt; a+b &lt;&lt; endl;
+    return 0;
+}</pre>
+<p>It's important that the return type of main() must be int when you use G++/GCC,or you may get compile error.  Here is a sample solution for problem 1000 using C/GCC:</p>
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a,b;
+    scanf(&quot;%d %d&quot;,&amp;a, &amp;b);
+    printf(&quot;%d\n&quot;,a+b);
+    return 0;
+}</pre>
+<p>Here is a sample solution for problem 1000 using PASCAL:</p>
+<pre>
+program p1000(Input,Output); 
+var 
+  a,b:Integer; 
+begin 
+   Readln(a,b); 
+   Writeln(a+b); 
+end.</pre>
+<p>Here is a sample solution for problem 1000 using JAVA:  Now java compiler is jdk 1.5, next is program for 1000</p>
+<pre>
+import java.io.*;
+import java.util.*;
+public class Main
+{
+            public static void main(String args[]) throws Exception
+            {
+                    Scanner cin=new Scanner(System.in);
+                    int a=cin.nextInt();int b=cin.nextInt();
+                    System.out.println(a+b);
+            }
+}</pre>
+<p>Old program for jdk 1.4</p>
+<pre>
+import java.io.*;
+import java.util.*;
+
+public class Main
+{
+    public static void main (String args[]) throws Exception
+    {
+        BufferedReader stdin = 
+            new BufferedReader(
+                new InputStreamReader(System.in));
+
+        String line = stdin.readLine();
+        StringTokenizer st = new StringTokenizer(line);
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        System.out.println(a+b);
+    }
+}</pre>]]></hint>
+<source><![CDATA[POJ]]></source>
+<solution language="C"><![CDATA[#include <stdio.h>
+void main()
+{
+    int a,b,sum;
+    scanf("%d%d",&a,&b);
+    sum=a+b;
+    printf("%d",sum);
+}
+   ]]></solution>
+<![CDATA[]]>
+</item>
+</fps>
