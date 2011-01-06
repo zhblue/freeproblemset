@@ -62,8 +62,8 @@ public class FPSViewer extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private static JMenuBar menuBar = new JMenuBar();
 	private static JMenu menuFile = new JMenu("File");
-	private static JMenu menuEdit = new JMenu("Edit");
-	private static JMenu menuHelp = new JMenu("Help");
+	//private static JMenu menuEdit = new JMenu("Edit");
+	//private static JMenu menuHelp = new JMenu("Help");
 	private static NodeList itemList;
 	private static String APPDIR = System.getProperty("user.dir").replaceAll(
 			"\\\\", "/");
