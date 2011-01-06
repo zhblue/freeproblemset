@@ -21,9 +21,9 @@
  * along with FreeProblemSet. if not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package freeproblemset;
 
+import java.awt.Desktop;
 import java.awt.GridBagLayout;
 import java.awt.LayoutManager;
 import java.awt.event.ActionEvent;
@@ -39,6 +39,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.io.Reader;
+import java.net.URI;
 import java.util.Iterator;
 import java.util.Vector;
 
@@ -62,17 +63,17 @@ public class FPSViewer extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private static JMenuBar menuBar = new JMenuBar();
 	private static JMenu menuFile = new JMenu("File");
-	//private static JMenu menuEdit = new JMenu("Edit");
-	//private static JMenu menuHelp = new JMenu("Help");
+	// private static JMenu menuEdit = new JMenu("Edit");
+	// private static JMenu menuHelp = new JMenu("Help");
 	private static NodeList itemList;
 	private static String APPDIR = System.getProperty("user.dir").replaceAll(
 			"\\\\", "/");
 	private JMenuItem menuOpen = new JMenuItem("Open");
 
 	public FPSViewer() {
-		
-	 	super("FPSingle");
-	 	mkdirs();
+
+		super("FPSingle");
+		mkdirs();
 		setSize(800, 600);
 		// this.setLayout(lm);
 		// System.out.println(System.getProperty("user.dir"));
@@ -84,33 +85,44 @@ public class FPSViewer extends JFrame implements ActionListener {
 		menuOpen.addActionListener(this);
 		menuFile.add(menuOpen);
 		menuBar.add(menuFile);
-		menuBar.add(menuEdit);
-		menuBar.add(menuHelp);
+		//menuBar.add(menuEdit);
+		//menuBar.add(menuHelp);
 		this.setJMenuBar(menuBar);
-		editorPane.addHyperlinkListener(new HyperlinkListener()
-        {
-            public void hyperlinkUpdate(HyperlinkEvent r)
-            {
-                try
-                {
-             if(r.getEventType() == HyperlinkEvent.EventType.ACTIVATED)
-            	 editorPane.setPage(r.getURL());
-                }catch(Exception e)
-                {}
-            }
-        });
+		editorPane.addHyperlinkListener(new HyperlinkListener() {
+			public void hyperlinkUpdate(HyperlinkEvent r) {
+				try {
+					if (r.getEventType() == HyperlinkEvent.EventType.ACTIVATED)
+						editorPane.setPage(r.getURL());
+				} catch (Exception e) {
+				}
+			}
+		});
 
 		setVisible(true);
 	}
+
 	private static void mkdirs() {
-		File dir=new File("cache/images");
-		if (!dir.exists()) dir.mkdirs();
+		File dir = new File("cache/images");
+		if (!dir.exists())
+			dir.mkdirs();
 	}
 
 	private static void loadPage(String URL) {
 		try {
 			editorPane.setPage(URL);
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private static void operBrowse(String url) {
+		Desktop desktop = Desktop.getDesktop();
+		URI uri;
+		try {
+			uri = new URI(url);
+			desktop.browse(uri);
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -158,24 +170,26 @@ public class FPSViewer extends JFrame implements ActionListener {
 		itemList = doc.getElementsByTagName("item");
 		try {
 			PrintStream ps = new PrintStream("cache/cache.html");
-			
-			for(int i=0;i<itemList.getLength();i++){
-				
+
+			for (int i = 0; i < itemList.getLength(); i++) {
+
 				Problem p = itemToProblem(itemList.item(i));
-				ps.println("<a href=p"+p.num+".html>"+p.title+"</a><br>");
-				try{
-				problem2HTML(p);
-				}catch(Exception e){}
+				ps.println("<a href=p" + p.num + ".html>" + p.title
+						+ "</a><br>");
+				try {
+					problem2HTML(p);
+				} catch (Exception e) {
+				}
 			}
 			ps.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 		loadPage("jar:file:" + APPDIR + "/FPSViewer.jar!/demo.xml");
 		loadPage("file:" + APPDIR + "/cache/cache.html");
+		operBrowse("file:" + APPDIR + "/cache/cache.html");
 	}
 
 	private static void problem2HTML(Problem p) {
@@ -192,7 +206,7 @@ public class FPSViewer extends JFrame implements ActionListener {
 		content = content.replaceFirst("\\$FPS_Source", p.source);
 		PrintStream ps = null;
 		try {
-			ps = new PrintStream("cache/p"+p.num+".html");
+			ps = new PrintStream("cache/p" + p.num + ".html");
 			ps.print(content);
 			ps.close();
 		} catch (FileNotFoundException e) {
@@ -254,7 +268,7 @@ public class FPSViewer extends JFrame implements ActionListener {
 				p.memory = value;
 			}
 			if (name.equalsIgnoreCase("description")) {
-				p.description=p.setImages(value);
+				p.description = p.setImages(value);
 			}
 			if (name.equalsIgnoreCase("input")) {
 				p.input = p.setImages(value);
@@ -304,8 +318,8 @@ public class FPSViewer extends JFrame implements ActionListener {
 }
 
 class Problem {
-	private static int counter=0;
-	public int num=counter++;
+	private static int counter = 0;
+	public int num = counter++;
 	Vector<Image> imageList = new Vector<Image>();
 	String title = "";
 	String time = "";
@@ -317,31 +331,34 @@ class Problem {
 	String sample_output = "";
 	String hint = "";
 	String source = "";
+
 	public String setImages(String html) {
 		// TODO Auto-generated method stub
-		Iterator<Image> i=imageList.iterator();
-		while(i.hasNext()){
+		Iterator<Image> i = imageList.iterator();
+		while (i.hasNext()) {
 			Image img = i.next();
-			html=html.replaceAll(img.oldURL, img.URL);
-			
+			html = html.replaceAll(img.oldURL, img.URL);
+
 		}
 		return html;
 	}
 }
 
 class Image {
-	private static int counter=0;
-	int num=counter++;
+	private static int counter = 0;
+	int num = counter++;
 	Problem p;
-	public Image(Node e,Problem p) {
-		this.p=p;
+
+	public Image(Node e, Problem p) {
+		this.p = p;
 		NodeList cn = e.getChildNodes();
-		oldURL=cn.item(0).getTextContent();
-		URL="images/pic"+p.num+"_"+num;
+		oldURL = cn.item(0).getTextContent();
+		URL = "images/pic" + p.num + "_" + num;
 		try {
-			
-			byte[] decodeBuffer = new sun.misc.BASE64Decoder().decodeBuffer(cn.item(1).getTextContent());
-			FileOutputStream fo=new FileOutputStream("cache/"+URL);
+
+			byte[] decodeBuffer = new sun.misc.BASE64Decoder().decodeBuffer(cn
+					.item(1).getTextContent());
+			FileOutputStream fo = new FileOutputStream("cache/" + URL);
 			fo.write(decodeBuffer);
 			fo.close();
 		} catch (DOMException e1) {
@@ -352,7 +369,6 @@ class Image {
 			e1.printStackTrace();
 		}
 	}
-	
 
 	String oldURL = "";
 	String URL = "";
