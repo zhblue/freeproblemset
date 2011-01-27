@@ -1,4 +1,78 @@
 <html>
+<head>
+  <style>
+
+a{ color:#1a5cc8; text-decoration:none }
+a:hover { color:orange; text-decoration:underline }
+
+h2{color:blue} 
+
+.toprow{
+	background-color:#1a5cc8;
+	color:#FFFFFF;
+    font-weight:bold;
+   white-space: nowrap;
+}
+.toprow a{ font-family: Arial; font-weight: bold; font-size: 18px; color: #FFFFFF; margin: 15px }
+.toprow a:hover{ font-family: Arial; font-weight: bold; font-size: 18px; color:orange; margin: 15px }
+
+.oddrow{background-color:#D7EBFF;white-space: nowrap;}
+.evenrow{background-color:#FFFFFF;white-space: nowrap;}
+body{
+	background-color:#FFFFFF;
+	background-image: url(../image/background.jpg);
+}
+.hd{
+color:#FFFFFF;
+font-weight:bold;
+}
+
+
+.time{
+	text-align: right;
+}
+.ip{
+	text-align: right;
+	padding-right: 5px;
+}
+tr.userinfo{
+	background-color:#FFFFF0;
+	font-size: 16px;
+}
+span.yes,.green {
+color:green;
+font-weight: bolder; 
+}
+span.no,.red{
+color:red;
+font-weight: bolder;
+}
+
+span.exadmin{
+color:gray;
+}
+#center{
+  text-align:center;
+}
+
+div.content {
+	height: auto;
+	background:#e4f0f8;
+	margin: 0;
+	padding: 0 20px;
+	font-size: 14px;
+	font-family: Times New Roman;
+	text-align: left
+}
+.sampledata{
+    white-space:pre;
+    background:#8db8ff;
+    font-size: 18px;
+}
+
+  
+  </style>
+</head>
 <center><h2>$FPS_TITLE</h2>
 <span class="green">Time Limit: </span>$FPS_TIME Sec&nbsp;&nbsp;
 <span class="green">Memory Limit: </span>$FPS_MEMORY MB<br>
@@ -15,10 +89,10 @@
 
 </div><h2>Sample Input</h2>
 			<div class="content">
-				<pre>$FPS_Sample_Input</pre>
+				<span class=sampledata>$FPS_Sample_Input</span>
 			</div><h2>Sample Output</h2>
 			<div class="content">
-				<pre>$FPS_Sample_Output</pre>
+				<span class=sampledata>$FPS_Sample_Output</span>
 			</div><h2>HINT</h2>
 			<div class="content">$FPS_HINT</div>
 			<h2>Source</h2>
