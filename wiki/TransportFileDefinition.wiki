@@ -22,8 +22,8 @@ Example of A+B problem in FPS format
  <fps version="1.1">
    <item>
      <title>A+B</title>
-     <time_limit unit=s>1</time_limit>
-     <memory_limit unit=mb>64</memory_limit>
+     <time_limit unit="s">1</time_limit>
+     <memory_limit unit="mb">64</memory_limit>
      <img>
         <src>JudgeOnline/upload/201009/Screenshot.png</src>
         <base64>iVBORw0K[BASE64_ENCODED_IMAGE_BINARY]RU5ErkJggg==</base64>
