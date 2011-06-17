@@ -1,4 +1,4 @@
-#labels Featured
+#labels Featured,Phase-Design
 # a transport file format to store all information about problems
 
 = Introduction =
@@ -19,7 +19,7 @@ Example of A+B problem in FPS format
 {{{
 
 <?xml version="1.0" encoding="UTF-8"?>
- <fps version="1.1">
+ <fps version="1.2">
    <item>
      <title>A+B</title>
      <time_limit unit="s">1</time_limit>
@@ -28,7 +28,7 @@ Example of A+B problem in FPS format
         <src>JudgeOnline/upload/201009/Screenshot.png</src>
         <base64>iVBORw0K[BASE64_ENCODED_IMAGE_BINARY]RU5ErkJggg==</base64>
      </img>
-     <description><![CDATA[print the sum of two integer<img src=JudgeOnline/upload/201009/Screenshot.png>]]</description>
+     <description><![CDATA[print the sum of two integer<img src=JudgeOnline/upload/201009/Screenshot.png>]]></description>
      <input>two integer a and b</input>
      <output>the sum of a and b</output>
      <sample_input>1 2</sample_input>
@@ -55,7 +55,7 @@ Example of A+B problem in FPS format
              return 0;
 
              }
-     ]]</solution>
+     ]]></solution>
      <spj language="C"></spj>
    </item>
  </fps>
