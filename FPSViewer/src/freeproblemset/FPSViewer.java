@@ -134,7 +134,13 @@ public class FPSViewer extends JFrame implements ActionListener {
 		// Demonstrate "Open" dialog:
 		int rVal = c.showOpenDialog(this);
 		if (rVal == JFileChooser.APPROVE_OPTION) {
-			filename = (c.getSelectedFile().getAbsolutePath());
+			try {
+				filename = (c.getSelectedFile().getCanonicalPath());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				filename = "jar:file:" + APPDIR + "/FPSViewer.jar!/demo.xml";
+			}
 
 		}
 		if (rVal == JFileChooser.CANCEL_OPTION) {
