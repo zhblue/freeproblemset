@@ -5,7 +5,7 @@
     unit CDATA #IMPLIED
 >
 <!ELEMENT memory_limit (#PCDATA)>
-<!ATTLIST time_limit
+<!ATTLIST memory_limit
     unit CDATA #IMPLIED
 >
 <!ELEMENT description (#PCDATA)>
