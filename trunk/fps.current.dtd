@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE fps[
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT time_limit (#PCDATA)>
 <!ATTLIST time_limit
@@ -26,4 +25,4 @@
 <!ELEMENT item 
 (title+,time_limit+,memory_limit+,memory_limit+,description+,input?,output?,sample_input+,sample_output+,hint?,source?,solution*,spj?)>
 <!ELEMENT fps(item*)>
-]>
+
