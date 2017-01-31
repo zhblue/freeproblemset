@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<fps version="1.2" url="https://github.com/zhblue/freeproblemset/">
+	<generator name="HUSTOJ" url="https://github.com/zhblue/hustoj/"/>
+	<item>
+<title><![CDATA[A+B Problem]]></title>
+<time_limit unit="s"><![CDATA[1]]></time_limit>
+<memory_limit unit="mb"><![CDATA[256]]></memory_limit>
+
+<description><![CDATA[<p>
+	Calculate a+b
+</p>]]></description>
+<input><![CDATA[<p>
+	Two integer a,b (0&lt;=a,b&lt;=10)
+</p>]]></input> 
+<output><![CDATA[<p>
+	Output a+b
+</p>]]></output>
+<sample_input><![CDATA[1 2]]></sample_input>
+<sample_output><![CDATA[3]]></sample_output>
+  <test_input><![CDATA[1 2
+
+]]></test_input>
+<test_output><![CDATA[3
+]]></test_output>
+<test_input><![CDATA[500 17
+]]></test_input>
+<test_output><![CDATA[517]]></test_output>
+<test_input><![CDATA[2 3
+]]></test_input>
+<test_output><![CDATA[5
+]]></test_output>
+<hint><![CDATA[<p>
+	Q: Where are the input and the output? A: Your program shall always <span>read input from stdin (Standard Input) and write output to stdout (Standard Output)</span>. For example, you can use 'scanf' in C or 'cin' in C++ to read from stdin, and use 'printf' in C or 'cout' in C++ to write to stdout. You <span>shall not output any extra data</span> to standard output other than that required by the problem, otherwise you will get a "Wrong Answer". User programs are not allowed to open and read from/write to files. You will get a "Runtime Error" or a "Wrong Answer" if you try to do so. Here is a sample solution for problem 1000 using C++/G++:
+</p>
+<pre>#include &lt;iostream&gt;
+using namespace std;
+int  main()
+{
+    int a,b;
+    cin &gt;&gt; a &gt;&gt; b;
+    cout &lt;&lt; a+b &lt;&lt; endl;
+    return 0;
+}</pre>
+<p>
+	It's important that the return type of main() must be int when you use G++/GCC,or you may get compile error. Here is a sample solution for problem 1000 using C/GCC:
+</p>
+<pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a,b;
+    scanf("%d %d",&amp;a, &amp;b);
+    printf("%d\n",a+b);
+    return 0;
+}</pre>
+<p>
+	Here is a sample solution for problem 1000 using PASCAL:
+</p>
+<pre>program p1000(Input,Output); 
+var 
+  a,b:Integer; 
+begin 
+   Readln(a,b); 
+   Writeln(a+b); 
+end.</pre>
+<p>
+	Here is a sample solution for problem 1000 using JAVA: Now java compiler is jdk 1.5, next is program for 1000
+</p>
+<pre>import java.io.*;
+import java.util.*;
+public class Main
+{
+            public static void main(String args[]) throws Exception
+            {
+                    Scanner cin=new Scanner(System.in);
+                    int a=cin.nextInt();
+                    int b=cin.nextInt();
+                    System.out.println(a+b);
+            }
+}</pre>
+<p>
+	Old program for jdk 1.4
+</p>
+<pre>import java.io.*;
+import java.util.*;
+
+public class Main
+{
+    public static void main (String args[]) throws Exception
+    {
+        BufferedReader stdin = 
+            new BufferedReader(
+                new InputStreamReader(System.in));
+
+        String line = stdin.readLine();
+        StringTokenizer st = new StringTokenizer(line);
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        System.out.println(a+b);
+    }
+}</pre>]]></hint>
+<source><![CDATA[系统原理，熟悉OJ]]></source>
+		<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+				<template language="C"><![CDATA[#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    printf("%d",a+b);
+    return 0;
+}
+]]></template>
+				<solution language="C++"><![CDATA[#include <iostream>
+#include <cstdio>
+using namespace std;
+int main()
+{
+#ifndef ONLINE_JUDGE
+	freopen("in.txt","r",stdin);
+#endif
+	int a,b;
+	while(cin >>a >>b)
+	{
+		cout <<a+b <<endl;
+	}
+	return 0;
+}]]></solution>
+				<template language="C++"><![CDATA[#include <iostream>
+using namespace std;
+int main(){
+    int a,b;
+    while(cin >> a >> b)
+        cout << a+b << endl;
+	return 0;
+}
+]]></template>
+				<solution language="Pascal"><![CDATA[program abprob;
+var
+  a,b:longint;
+begin
+   readln(a,b);
+   writeln(a+b);
+end.]]></solution>
+			<solution language="Java"><![CDATA[import java.util.*;
+public class Main
+{
+	public static void main(String args[])
+	{
+		Scanner cin = new Scanner(System.in);
+		int a,b;
+
+		while(cin.hasNextInt())
+		{
+			a = cin.nextInt();
+			b = cin.nextInt();
+			System.out.println(a+b);
+		}
+	}
+}]]></solution>
+				<prepend language="Java"><![CDATA[import java.io.*;
+
+import java.util.*;
+
+public class Main
+
+{
+]]></prepend>
+					<template language="Java"><![CDATA[static int plus_2_int(int a,int b){
+
+}]]></template>
+					<append language="Java"><![CDATA[            public static void main(String args[]) throws Exception
+
+            {
+
+                    Scanner cin=new Scanner(System.in);
+                    while(cin.hasNextInt()){
+                        int a=cin.nextInt();
+                        int b=cin.nextInt();
+                        System.out.println(plus_2_int(a,b));
+                    }
+
+            }
+
+}]]></append>
+					<template language="Python"><![CDATA[a = input()
+a = a.split()
+b = []
+for i in a:
+        b.append(int(i))
+print (sum(b))
+]]></template>
+					<template language="C#"><![CDATA[using System;
+ 
+namespace HDOJ_A_Plus_B_CSharp{
+    class HDOJ1000 {
+        public static void Main() {
+            string line;
+            string []p;
+            int a,b;
+            while((line=Console.ReadLine())!=null){
+            	if(line=="") break;
+                p=line.Split(' ');
+                a=int.Parse(p[0]);b=int.Parse(p[1]);
+                Console.WriteLine(a+b);
+            }
+        }
+    }
+}
+]]></template>
+					<template language="Obj-C"><![CDATA[#import <Foundation/Foundation.h>
+
+int main(void)
+{
+	int a,b;
+	scanf("%d %d",&a,&b);
+	//NSLog(@"%d",a+b);
+	printf("%d",a+b);
+
+
+}]]></template>
+					<template language="Clang"><![CDATA[#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    printf("%d",a+b);
+    return 0;
+}
+]]></template>
+					<template language="Clang++"><![CDATA[#include <iostream>
+using namespace std;
+int main(){
+    int a,b;
+    while(cin >> a >> b)
+        cout << a+b << endl;
+	return 0;
+}
+]]></template>
+				<solution language="JavaScript"><![CDATA[process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+var input = "";
+var input_array = "";
+process.stdin.on('data', function (data) {
+    input += data;
+});
+function solveMeFirst(a, b) {
+    return a + b;
+}
+process.stdin.on('end', function () {
+    var arr = input.split("\n");
+    for (var i=0; i<arr.length; i++) {
+                                input_array=arr[i].split(" ");
+
+            var inline = 0;
+            var res;
+            var _a = parseInt(input_array[inline], 10);
+            inline += 1;
+
+            var _b = parseInt(input_array[inline], 10);
+            inline += 1;
+
+            res = solveMeFirst(_a, _b);
+            if(!isNaN(res) )process.stdout.write( res + "\n");
+    }
+});
+]]></solution>
+				<template language="JavaScript"><![CDATA[process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+var input = "";
+var input_array = "";
+process.stdin.on('data', function (data) {
+    input += data;
+});
+function solveMeFirst(a, b) {
+    return a + b;
+}
+process.stdin.on('end', function () {
+    var arr = input.split("\n");
+    for (var i=0; i<arr.length; i++) {
+                                input_array=arr[i].split(" ");
+
+            var inline = 0;
+            var res;
+            var _a = parseInt(input_array[inline], 10);
+            inline += 1;
+
+            var _b = parseInt(input_array[inline], 10);
+            inline += 1;
+
+            res = solveMeFirst(_a, _b);
+            if(!isNaN(res) )process.stdout.write( res + "\n");
+    }
+});
+]]></template>
+				<solution language="Go"><![CDATA[package main
+import "fmt"
+import "io"
+func main() {
+  a:=0
+  b:=0
+  for {
+  	_, err := fmt.Scanf("%d%d",&a,&b)
+  	if err == io.EOF {
+  		break
+  	} else {
+		fmt.Printf("%d\n",a+b)
+	}
+  }
+}]]></solution>
+	</item>
+</fps>
