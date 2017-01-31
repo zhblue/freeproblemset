@@ -17,12 +17,18 @@
 <!ELEMENT source (#PCDATA)>
 <!ELEMENT solution (#PCDATA)>
 <!ATTLIST solution language CDATA #REQUIRED> 
+<!ELEMENT prepend (#PCDATA)>
+<!ATTLIST prepend language CDATA #REQUIRED> 
+<!ELEMENT template (#PCDATA)>
+<!ATTLIST template language CDATA #REQUIRED> 
+<!ELEMENT append (#PCDATA)>
+<!ATTLIST append language CDATA #REQUIRED> 
 <!ELEMENT spj (#PCDATA)>
 <!ATTLIST spj language CDATA #REQUIRED> 
 <!ELEMENT src (#PCDATA)>
 <!ELEMENT base64 (#PCDATA)>
 <!ELEMENT img (src+,base64+)>
 <!ELEMENT item 
-(title+,time_limit+,memory_limit+,memory_limit+,description+,input?,output?,sample_input+,sample_output+,hint?,source?,solution*,spj?)>
+(title+,time_limit+,memory_limit+,memory_limit+,description+,input?,output?,sample_input+,sample_output+,hint?,source?,solution*,prepend*,template*,append*,spj?)>
 <!ELEMENT fps (item*)>
 
