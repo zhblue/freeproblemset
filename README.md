@@ -50,4 +50,8 @@ For now it's designed for hustoj (on googlecode),but it should be usable for oth
 
 目前HUSTOJ已经可以进行题目和测试数据的导出。
 
+
+需要题目资源，请访问[TK题库](http://tk.hustoj.com/)
+
+
 本项目期待您的加入…… 联系我10982766@企鹅.com
