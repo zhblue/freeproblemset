@@ -53,6 +53,7 @@ public class LOJ2FPS extends JFrame implements ActionListener {
 						fps.close();
 						if (title != null) {
 							title = title.replaceAll("/", "_");
+							title = title.replaceAll("*", "x");
 
 							boolean re = file.renameTo(new File(vijosDataPath
 									+ "/loj_" + title + ".xml"));
