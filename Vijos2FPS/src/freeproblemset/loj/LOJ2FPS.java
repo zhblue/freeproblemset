@@ -49,8 +49,9 @@ public class LOJ2FPS extends JFrame implements ActionListener {
 				if (2>1||file.length() > SplitLimit) {
 					printTail(fps);
 					fps.close();
-					title=title.replaceAll("/", "_");
-					
+					if(title!=null){
+						title=title.replaceAll("/", "_");
+					}
 					boolean re=file.renameTo(new File(vijosDataPath+"/loj_"+title+".xml"));
 					if(!re) file.renameTo(new File(vijosDataPath+"/loj_"+title2Num(title)+".xml"));
 					fname = vijosDataPath + "/fps-" + (i+1) + ".xml";
