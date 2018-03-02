@@ -18,7 +18,6 @@ import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class LOJ2FPS extends JFrame implements ActionListener {
-	
 
 	private static final long SplitLimit = 8000000;
 	private static String APPDIR = System.getProperty("user.dir").replaceAll(
@@ -30,9 +29,12 @@ public class LOJ2FPS extends JFrame implements ActionListener {
 		convert(vijosDataPath);
 		System.exit(0);
 	}
-	public String title2Num(String title){
-		return (mid(title,"#","."));
+
+	public String title2Num(String title) {
+
+		return (mid(title, "#", "."));
 	}
+
 	private void convert(String vijosDataPath) {
 		// TODO Auto-generated method stub
 		File basedir = new File(vijosDataPath);
@@ -40,24 +42,33 @@ public class LOJ2FPS extends JFrame implements ActionListener {
 			String fname = vijosDataPath + "/fps.xml";
 			PrintStream fps = new PrintStream(fname, "UTF-8");
 			// fps=System.out;
-			printHeader(fps); 
+			printHeader(fps);
 			String[] items = basedir.list();
 			for (int i = 0; i < items.length; i++) {
-				if(items[i].endsWith("html")&&!items[i].endsWith(".1.html")){
-				String title=printProblem(fps, basedir + "/" + items[i]);
-				File file = new File(fname);
-				if (2>1||file.length() > SplitLimit) {
-					printTail(fps);
-					fps.close();
-					if(title!=null){
-						title=title.replaceAll("/", "_");
+				if (items[i].endsWith("html") && !items[i].endsWith(".1.html")) {
+					String title = printProblem(fps, basedir + "/" + items[i]);
+					File file = new File(fname);
+					if (2 > 1 || file.length() > SplitLimit) {
+						printTail(fps);
+						fps.close();
+						if (title != null) {
+							title = title.replaceAll("/", "_");
+
+							boolean re = file.renameTo(new File(vijosDataPath
+									+ "/loj_" + title + ".xml"));
+							try {
+								if (!re)
+									file.renameTo(new File(vijosDataPath
+											+ "/loj_" + title2Num(title)
+											+ ".xml"));
+							} catch (Exception e) {
+								System.err.println(title);
+							}
+						}
+						fname = vijosDataPath + "/fps-" + (i + 1) + ".xml";
+						fps = new PrintStream(fname, "UTF-8");
+						printHeader(fps);
 					}
-					boolean re=file.renameTo(new File(vijosDataPath+"/loj_"+title+".xml"));
-					if(!re) file.renameTo(new File(vijosDataPath+"/loj_"+title2Num(title)+".xml"));
-					fname = vijosDataPath + "/fps-" + (i+1) + ".xml";
-					fps = new PrintStream(fname, "UTF-8");
-					printHeader(fps);
-				}
 				}
 			}
 			printTail(fps);
@@ -73,66 +84,73 @@ public class LOJ2FPS extends JFrame implements ActionListener {
 		// TODO Auto-generated method stub
 		fps.println("</fps>");
 	}
-	private String mid(String html,String mark1,String mark2){
-		int i=html.indexOf(mark1);
-		int j=html.indexOf(mark2,i);
-		return html.substring(i+mark1.length(),j-1).trim();
+
+	private String mid(String html, String mark1, String mark2) {
+		int i = html.indexOf(mark1);
+		int j = html.indexOf(mark2, i);
+		return html.substring(i + mark1.length(), j - 1).trim();
 	}
+
 	private String printProblem(PrintStream fps, String file) {
 		// TODO Auto-generated method stub
-		String dir=file.substring(0,file.length()-5);
-		String html=readFile(file);
-		//System.out.println(html);
-		
-		try{
-		String title=mid(html,"<h1 class=\"ui header\">","</h1>");
-		String memory=mid(html,"内存限制：","MiB");
-		String time=mid(html,"时间限制：","ms");
-		String desc=mid(html,"<h4 class=\"ui top attached block header\">题目描述</h4>","<h4 class=\"ui block header\" id=\"show_tag_title_div\"");
-		
-		fps.println("<item>");
-		printElement(fps, "title", title, "");
-		printElement(fps, "description", desc, "");
-//		printElement(fps, "input", dir + "/InputFormat.txt", "", true);
-//		printElement(fps, "output", dir + "/OutputFormat.txt", "", true);
-//		printElement(fps, "sample_input", dir + "/SampleInput.txt", "", false);
-//		printElement(fps, "sample_output", dir + "/SampleOutput.txt", "", false);
-		
-		printElement(fps, "time_limit", time, "unit=\"ms\"");
-		printElement(fps, "memory_limit", memory, "unit=\"mb\"");
-//		printElement(fps, "hint", dir + "/Hint.txt", "", true);
-//		printElement(fps, "source", dir + "/Source.txt", "", true);
+		String dir = file.substring(0, file.length() - 5);
+		String html = readFile(file);
+		// System.out.println(html);
 
-		printData(fps, dir);
-		
-		fps.println("</item>");
-			System.out.println(file+":"+title);
-		return title;
-		}catch(Exception e){
+		try {
+			String title = mid(html, "<h1 class=\"ui header\">", "</h1>");
+			String memory = mid(html, "内存限制：", "MiB");
+			String time = mid(html, "时间限制：", "ms");
+			String desc = mid(html,
+					"<h4 class=\"ui top attached block header\">题目描述</h4>",
+					"<h4 class=\"ui block header\" id=\"show_tag_title_div\"");
+
+			fps.println("<item>");
+			printElement(fps, "title", title, "");
+			printElement(fps, "description", desc, "");
+			// printElement(fps, "input", dir + "/InputFormat.txt", "", true);
+			// printElement(fps, "output", dir + "/OutputFormat.txt", "", true);
+			// printElement(fps, "sample_input", dir + "/SampleInput.txt", "",
+			// false);
+			// printElement(fps, "sample_output", dir + "/SampleOutput.txt", "",
+			// false);
+
+			printElement(fps, "time_limit", time, "unit=\"ms\"");
+			printElement(fps, "memory_limit", memory, "unit=\"mb\"");
+			// printElement(fps, "hint", dir + "/Hint.txt", "", true);
+			// printElement(fps, "source", dir + "/Source.txt", "", true);
+
+			printData(fps, dir);
+
+			fps.println("</item>");
+			System.out.println(file + ":" + title);
+			return title;
+		} catch (Exception e) {
 			System.err.println(file);
-			
+
 		}
 		return null;
-		//System.exit(0);
+		// System.exit(0);
 	}
 
 	private void printData(PrintStream fps, String dir) {
-		dir+= "/testdata/download";
+		dir += "/testdata/download";
 		File basedir = new File(dir);
-		//System.out.println(dir);
-		
+		// System.out.println(dir);
+
 		String[] items = basedir.list(new ExtensionFilter("in"));
-		for (int i = 0; items!=null&&i < items.length; i++) {
-			//System.out.println(items[i]);
-			printElement(fps, "test_input", dir + "/"+ items[i], "", false);
-			String outfile=dir + "/"+ items[i].substring(0,items[i].length()-3)+".out";
-			if(new File(outfile).exists())
+		for (int i = 0; items != null && i < items.length; i++) {
+			// System.out.println(items[i]);
+			printElement(fps, "test_input", dir + "/" + items[i], "", false);
+			String outfile = dir + "/"
+					+ items[i].substring(0, items[i].length() - 3) + ".out";
+			if (new File(outfile).exists())
 				printElement(fps, "test_output", outfile, "", false);
-			outfile=dir + "/"+ items[i].substring(0,items[i].length()-3)+".ans";
-			if(new File(outfile).exists())
+			outfile = dir + "/" + items[i].substring(0, items[i].length() - 3)
+					+ ".ans";
+			if (new File(outfile).exists())
 				printElement(fps, "test_output", outfile, "", false);
-			
-			
+
 		}
 	}
 
@@ -140,7 +158,8 @@ public class LOJ2FPS extends JFrame implements ActionListener {
 			String props) {
 		// TODO Auto-generated method stub
 		fps.printf("<%s %s><![CDATA[", tagName, props);
-		fps.printf("%s]]></%s>\n", content.replaceAll("]]>", "]]]><![CDATA[]>"), tagName);
+		fps.printf("%s]]></%s>\n",
+				content.replaceAll("]]>", "]]]><![CDATA[]>"), tagName);
 	}
 
 	private void printElement(PrintStream fps, String tagName, String file,
@@ -264,17 +283,18 @@ public class LOJ2FPS extends JFrame implements ActionListener {
 	}
 }
 
-
 class ExtensionFilter implements FilenameFilter {
 	private String ext;
-	public ExtensionFilter(String ext){
-		this.ext=ext;
-		
+
+	public ExtensionFilter(String ext) {
+		this.ext = ext;
+
 	}
+
 	@Override
 	public boolean accept(File arg0, String arg1) {
 		// TODO Auto-generated method stub
-		 return (arg1.toLowerCase().endsWith(ext));
+		return (arg1.toLowerCase().endsWith(ext));
 	}
 
 }
