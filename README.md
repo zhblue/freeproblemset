@@ -42,7 +42,7 @@ For now it's designed for hustoj (on googlecode),but it should be usable for oth
 
 最新格式可以在TransportFileDefinition中看到，欢迎讨论和建议。
 
-因为个人的原因，以HUSTOJ为原型系统，建立导入/导出功能，因此本项目的主要工作是制定数据格式，相应的代码工作在HUSTOJ中完成。
+因为个人的原因，以 [HUSTOJ](https://github.com/zhblue/hustoj) 为原型系统，建立导入/导出功能，因此本项目的主要工作是制定数据格式，相应的代码工作在HUSTOJ中完成。
 
 如果您的OJ系统不是HUSTOJ,也没关系，只要您有修改源码的权限，增加基于XML的导入导出功能是理论上一定可以实现的。
 
