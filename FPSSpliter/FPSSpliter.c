@@ -7,7 +7,7 @@ const char * head2="<fps version=\"1.2\" url=\"https://github.com/zhblue/freepro
 const char * head3="<generator name=\"HUSTOJ\" url=\"https://github.com/zhblue/hustoj/\"/>";
 const char * tail="</item>\n</fps>\n";
 		if(argc<2){
-			printf("usage: fpsliter <fpsfile.xml> [size]\n \t http://github.com/zhblue/freeproblemset\n");
+			printf("Usage: fpssliter <fpsfile.xml> [size]\n \t http://github.com/zhblue/freeproblemset\n");
 			return -1;
 		}else{
 			printf("Splitting freeproblemset file: %s\n",argv[1]);
