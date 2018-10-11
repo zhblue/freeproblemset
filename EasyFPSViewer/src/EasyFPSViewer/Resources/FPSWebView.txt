@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problem</title>
+</head>
+
+<body>
+<div>
+    <h2 style="text-align: center;">[[[Title]]]</h2>
+    <hr />
+    <div style="text-align: center;">
+        <p>TimeLimit:[[[TimeLimit]]] | MemoryLimit:[[[MemoryLimit]]]</p>
+    </div>
+    <div>
+        <h3>Description</h3>
+        <div style="background-color: #f0f0f5;">[[[Description]]]</div>
+        <h3>Input</h3>
+        <div style="background-color: #f0f0f5;">[[[Input]]]</div>
+        <h3>Output</h3>
+        <div style="background-color: #f0f0f5;">[[[Output]]]</div>
+        <h3>Sample Input</h3>
+        <pre style="background-color: #f0f0f5;">[[[Sample Input]]]</pre>
+        <h3>Sample Output</h3>
+        <pre style="background-color: #f0f0f5;">[[[Sample Output]]]</pre>
+        <h3>Hint</h3>
+        <div style="background-color: #f0f0f5;">[[[Hint]]]</div>
+        <h3>Source</h3>
+        [[[Source]]]
+    </div>
+</div>
+</body>
+</html>
