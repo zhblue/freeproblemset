@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using EasyFPSViewer.Core;
 
 namespace EasyFPSViewer
 {
@@ -14,6 +15,7 @@ namespace EasyFPSViewer
         public AboutForm()
         {
             InitializeComponent();
+            I18N.InitControl(this);
         }
 
         private void AboutForm_Load(object sender, EventArgs e)

@@ -1,0 +1,55 @@
+##简体中文
+File=文件
+Load=加载
+Save=保存
+Bug Report=错误反馈
+About=关于
+Exit=退出
+
+Add Problem=添加问题
+Edit=编辑
+Search=搜索
+Clear=清空
+Tools=工具
+Replace NewLine To \n=替换换行符为\n
+Split FPS=切割FPS
+
+Title=标题
+TimeLimit=时间限制
+MemoryLimit=内存限制
+TestCases=测试点数
+DataSize=数据大小
+
+Show Details=查看详情
+Delete=删除
+
+Title:=标题:
+Description:=题目描述:
+
+Browse=搜索
+Split=分割
+Help?=帮助?
+
+Output Directory:=输出目录:
+File Prefix:=文件名前缀:
+Szie:=大小
+
+Save successful!=保存成功!
+Save failed!=保存失败!
+This operation will replace all NewLine Chars of TestData to \n(Linux). Are you sure ? =此操作将替换测试数据中所有的换行符为\n(Linux). 您确定吗？
+Replace successful!=替换成功!
+Result Count=结果数
+
+Keywords can not be empty.=关键词不能同时为空.
+
+Split successful!=分割成功!
+Split failed!=分割失败!
+Size must be a number.=大小 必须为整数
+Split tool can split a big FPS file to some little files.=分割工具可以将一个较大的FPS文件切割为多个小文件.
+description:=      描述:
+Input:=输入:
+Output:=输出:
+SampleInput=样例输入
+SampleOutput=样例输出
+Hint:=提示:
+Source:=来源:
