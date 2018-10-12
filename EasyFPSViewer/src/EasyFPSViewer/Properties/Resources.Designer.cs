@@ -97,5 +97,25 @@ namespace EasyFPSViewer.Properties {
                 return ResourceManager.GetString("FPSWebView", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   查找类似 ##简体中文
+        ///File=文件
+        ///Load=加载
+        ///Save=保存
+        ///About=关于
+        ///Exit=退出
+        ///
+        ///Edit=编辑
+        ///Clear=清空
+        ///Tools=工具
+        ///Replace NewLine To \n=替换换行符为\n
+        ///Split FPS=切割FPS 的本地化字符串。
+        /// </summary>
+        internal static string Zh_Cn {
+            get {
+                return ResourceManager.GetString("Zh_Cn", resourceCulture);
+            }
+        }
     }
 }

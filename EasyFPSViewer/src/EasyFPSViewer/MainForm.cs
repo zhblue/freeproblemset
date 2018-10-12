@@ -9,12 +9,16 @@ namespace EasyFPSViewer
 {
     public partial class MainForm : Form
     {
-        private List<FPSItem> _fpsItemList = new List<FPSItem>();
+        public FPSListBinder FPSListBinder { get; private set; }
+
         private AboutForm _aboutForm;
         private SplitForm _splitForm;
         public MainForm()
         {
             InitializeComponent();
+            FPSListBinder = new FPSListBinder(listView_Problem);
+            I18N.InitControl(this);
+            I18N.InitContextMenuStrip(contextMenuStrip_FPSItemList);
         }
 
         #region Event
@@ -76,13 +80,13 @@ namespace EasyFPSViewer
                 {
                     using (FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.Create))
                     {
-                        new FPSParser().ConvertToStream(_fpsItemList.ToArray(), fs);
+                        new FPSParser().ConvertToStream(FPSListBinder.FPSItemList.ToArray(), fs);
                     }
-                    MessageBox.Show("Save successful!");
+                    MessageBox.Show(I18N.GetStr("Save successful!"));
                 }
                 catch
                 {
-                    MessageBox.Show("Save failed!");
+                    MessageBox.Show(I18N.GetStr("Save failed!"));
                 }
             }
         }
@@ -94,17 +98,17 @@ namespace EasyFPSViewer
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DeleteNowSelectedItems();
+            DeleteSelectedItems();
         }
 
         private void replaceNewLineToNToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            const string message =
-                "This operation will replace all NewLine Chars of TestData to \\n(Linux)\r\nAre you sure ? ";
+            string message =
+                I18N.GetStr("This operation will replace all NewLine Chars of TestData to \\n(Linux). Are you sure ? ");
             if (MessageBox.Show(message, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 ReplaceItemsNewLineToLinux();
-                MessageBox.Show("Replace success");
+                MessageBox.Show(I18N.GetStr("Replace successful!"));
             }
         }
 
@@ -140,7 +144,7 @@ namespace EasyFPSViewer
         {
             if (_splitForm == null || _splitForm.IsDisposed)
             {
-                _splitForm = new SplitForm(_fpsItemList);
+                _splitForm = new SplitForm(FPSListBinder.FPSItemList);
                 _splitForm.Show();
             }
             else
@@ -148,13 +152,79 @@ namespace EasyFPSViewer
                 _splitForm.Focus();
             }
         }
+
+        private void listView_Problem_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            switch (e.Column)
+            {
+                case 0: FPSListBinder.Sort(n => n.Title); break;
+                case 1: FPSListBinder.Sort(n => n.TimeLimit); break;
+                case 2: FPSListBinder.Sort(n => n.MemoryLimit); break;
+                case 3: FPSListBinder.Sort(n => n.TestInput.Length); break;
+                case 4: FPSListBinder.Sort(n => n.TestDataSize); break;
+            }
+        }
+
+        private void showDetailsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ShowSelectedFPSItems();
+        }
+
+        private void editToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            EditSelectedFPSItems();
+        }
+
+        private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DeleteSelectedItems();
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchForm searchForm = new SearchForm();
+            searchForm.ShowDialog();
+
+            if (searchForm.Result.Item1)
+            {
+                int count = FPSListBinder.Search(searchForm.Result.Item2, searchForm.Result.Item3);
+                MessageBox.Show(count.ToString(), I18N.GetStr("Result Count"));
+            }
+
+        }
+
+        private void editStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditSelectedFPSItems();
+        }
+
+        private void addProblemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FPSListBinder.Add(new FPSItem
+            {
+                Title = "New problem",
+                TimeLimit = 1,
+                TimeLimitUnit = "s",
+                MemoryLimit = 256,
+                MemoryLimitUnit = "mb",
+                TestInput = new string[0],
+                TestOutput = new string[0],
+                Solutions = new FPSItemSolution[0],
+                Images = new FPSItemImage[0],
+                SpecialJudge = new FPSItemSpecialJudge[0]
+            });
+        }
+
+        private void bugReportStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Azure99/EasyFPSViewer/issues");
+        }
         #endregion
 
         #region Method
         private void ClearFPSItem()
         {
-            _fpsItemList.Clear();
-            listView_Problem.Items.Clear();
+            FPSListBinder.Clear();
         }
 
         private void LoadFPSFiles(string[] files)
@@ -178,50 +248,30 @@ namespace EasyFPSViewer
                 MessageBox.Show("Parse error!\r\n" + xmlFilePath);
                 return;
             }
-
-            _fpsItemList.AddRange(fpsItems);
+            
 
             foreach (FPSItem fpsItem in fpsItems)
             {
-                ListViewItem viewItem = listView_Problem.Items.Add(fpsItem.Title);
-                viewItem.SubItems.Add(fpsItem.TimeLimit + fpsItem.TimeLimitUnit);
-                viewItem.SubItems.Add(fpsItem.MemoryLimit + fpsItem.MemoryLimitUnit);
-
-                int casesCount = fpsItem.TestOutput.Length;
-                if (!string.IsNullOrEmpty(fpsItem.SampleOutput))
-                {
-                    casesCount++;
-                }
-                viewItem.SubItems.Add(casesCount.ToString());
-
-                viewItem.SubItems.Add((Math.Max(fpsItem.TestDataSize / 1024, 1)).ToString() + "KB");
+                FPSListBinder.Add(fpsItem);
             }
         }
 
-        private void DeleteNowSelectedItems()
+        private void DeleteSelectedItems()
         {
-            List<ListViewItem> viewItemList = new List<ListViewItem>();
-            List<FPSItem> fpsItemList = new List<FPSItem>();
-            foreach (ListViewItem viewItem in listView_Problem.SelectedItems)
+            foreach (FPSItem item in FPSListBinder.GetSelectedItems())
             {
-                viewItemList.Add(viewItem);
-                fpsItemList.Add(_fpsItemList[viewItem.Index]);
+                FPSListBinder.Remove(item);
             }
+        }
 
-            foreach (ListViewItem item in viewItemList)
-            {
-                listView_Problem.Items.Remove(item);
-            }
-
-            foreach (FPSItem item in fpsItemList)
-            {
-                _fpsItemList.Remove(item);
-            }
+        private void CloseItemForm(FPSItem fpsItem)
+        {
+            FPSListBinder.CloseProblemForm(fpsItem);
         }
 
         private void ReplaceItemsNewLineToLinux()
         {
-            foreach (FPSItem item in _fpsItemList)
+            foreach (FPSItem item in FPSListBinder.FPSItemList)
             {
                 item.SampleInput = item.SampleInput.Replace("\r\n", "\n").Replace("\r", "\n");
                 item.SampleOutput = item.SampleOutput.Replace("\r\n", "\n").Replace("\r", "\n");
@@ -239,13 +289,20 @@ namespace EasyFPSViewer
 
         private void ShowSelectedFPSItems()
         {
-            foreach (ListViewItem viewItem in listView_Problem.SelectedItems)
+            foreach (FPSItem item in FPSListBinder.GetSelectedItems())
             {
-                new ProblemForm(_fpsItemList[viewItem.Index]).Show();
+                FPSListBinder.CreatePorblemForm(item);
+            }
+        }
+
+        private void EditSelectedFPSItems()
+        {
+            foreach (FPSItem item in FPSListBinder.GetSelectedItems())
+            {
+                FPSListBinder.CreateEditForm(item);
             }
         }
 
         #endregion
-
     }
 }
