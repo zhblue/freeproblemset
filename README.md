@@ -48,10 +48,10 @@ For now it's designed for hustoj (on googlecode),but it should be usable for oth
 
 一旦您的系统有了导入功能，您就可以从本站下载题目数据；一旦您有导出功能，您就可以导出题目与兄弟院校进行交流，如果您愿意，当然更希望您能参与本项目，将导出的数据共享出来，这样我们就可以共同创建世界上第一个开源OJ数据中心。
 
+推荐使用[EasyFPSViewer](https://github.com/zhblue/freeproblemset/tree/master/EasyFPSViewer)查看编辑fps/xml文件。
+
 目前HUSTOJ已经可以进行题目和测试数据的导出。
 
-
 需要题目资源，请访问[TK题库](http://tk.hustoj.com/)
-
 
 本项目期待您的加入…… 联系我10982766@企鹅.com
