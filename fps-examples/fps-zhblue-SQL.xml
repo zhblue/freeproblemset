@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<fps version="1.2" url="https://github.com/zhblue/freeproblemset/">
+	<generator name="HUSTOJ" url="https://github.com/zhblue/hustoj/"/>
+	<item>
+<title><![CDATA[Select]]></title>
+<time_limit unit="s"><![CDATA[1]]></time_limit>
+<memory_limit unit="mb"><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">user表结构&nbsp;</span><br />
+<br />
+<br />
+<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;"> 
+<table style="width:50%;" cellpadding="2" cellspacing="0" border="1" bordercolor="#000000">
+	<tbody>
+		<tr>
+			<td>
+				列名<br />
+			</td>
+			<td>
+				类型
+			</td>
+			<td>
+				说明
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">id</span><br />
+			</td>
+			<td>
+				<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">&nbsp;int&nbsp;</span><span></span><br />
+			</td>
+			<td>
+				编号
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">username&nbsp;</span><br />
+			</td>
+			<td>
+				<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">varchar(20)&nbsp;</span><br />
+			</td>
+			<td>
+				用户名
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+</span><span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">请查询user表全部记录&nbsp;</span> <br />
+<br />
+<br />
+<br />
+<br />]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[drop table user;
+create table user(id int,username char(10));
+insert into user values(2,'jerry');
+]]></sample_input>
+<sample_output><![CDATA[2|jerry
+]]></sample_output>
+  <test_input><![CDATA[drop table user;
+create table user(id int,username varchar(10));
+insert into user(id,username) values(1,'tom');
+select * from user;]]></test_input>
+<test_output><![CDATA[1|tom]]></test_output>
+<hint><![CDATA[<span>select * from user;</span>]]></hint>
+<source><![CDATA[SQL]]></source>
+		<solution language="SQL(sqlite3)"><![CDATA[select * from user
+]]></solution>
+				<template language="SQL(sqlite3)"><![CDATA[select * from user;]]></template>
+		</item>
+<item>
+<title><![CDATA[Where]]></title>
+<time_limit unit="s"><![CDATA[1]]></time_limit>
+<memory_limit unit="mb"><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">user表结构&nbsp;</span><br />
+<br />
+<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;"> 
+<table cellpadding="2" cellspacing="0" border="1" bordercolor="#000000" style="width:454px;">
+	<tbody>
+		<tr>
+			<td>
+				列名<br />
+			</td>
+			<td>
+				类型
+			</td>
+			<td>
+				说明
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">id</span><br />
+			</td>
+			<td>
+				<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">&nbsp;int&nbsp;</span><br />
+			</td>
+			<td>
+				编号
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">username&nbsp;</span><br />
+			</td>
+			<td>
+				<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">varchar(20)&nbsp;</span><br />
+			</td>
+			<td>
+				用户名
+			</td>
+		</tr>
+		<tr>
+			<td>
+				age
+			</td>
+			<td>
+				int
+			</td>
+			<td>
+				年龄
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+</span><span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">请查询user表年龄大于18的用户的名字</span><span>&nbsp;</span>]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[drop table user;
+create table user(id int,username char(10),age int);
+insert into user values(2,'jerry',19);
+]]></sample_input>
+<sample_output><![CDATA[jerry]]></sample_output>
+  <test_input><![CDATA[drop table user;
+create table user(id int,username char(10),age int);
+insert into user values(1,'tom',20);
+insert into user values(2,'jerry',19);
+insert into user values(3,'reacher',10);
+insert into user values(4,'heisenberg',5);
+]]></test_input>
+<test_output><![CDATA[tom
+jerry
+]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[SQL]]></source>
+		<solution language="SQL(sqlite3)"><![CDATA[select username from user where age>18;]]></solution>
+	</item>
+<item>
+<title><![CDATA[Insert]]></title>
+<time_limit unit="s"><![CDATA[1]]></time_limit>
+<memory_limit unit="mb"><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<span style="color:#333333;font-size:14px;background-color:#FFFFFF;font-family:&quot;">user表结构&nbsp;</span><br />
+<br />
+
+	<span style="background-color:#FFFFFF;font-family:&quot;">
+	<table cellpadding="2" cellspacing="0" border="1" bordercolor="#000000" style="color:#333333;font-size:14px;background-color:transparent;width:454px;">
+		<tbody>
+			<tr>
+				<td>
+					列名<br />
+				</td>
+				<td>
+					类型
+				</td>
+				<td>
+					说明
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">id</span><br />
+				</td>
+				<td>
+					<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">&nbsp;int&nbsp;</span><br />
+				</td>
+				<td>
+					编号
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">username&nbsp;</span><br />
+				</td>
+				<td>
+					<span style="color:#333333;font-family:&quot;font-size:14px;background-color:#FFFFFF;">varchar(20)&nbsp;</span><br />
+				</td>
+				<td>
+					用户名
+				</td>
+			</tr>
+			<tr>
+				<td>
+					age
+				</td>
+				<td>
+					int
+				</td>
+				<td>
+					年龄<br />
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<span><br />
+</span></span>
+<br />
+
+	<span><span style="background-color:#FFFFFF;">请插入一条记录，用户编号100，用户名guest，年龄22</span></span>
+<br />]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[drop table user;
+create table user(id int,username char(10),age int);
+]]></sample_input>
+<sample_output><![CDATA[100|guest|22]]></sample_output>
+  <hint><![CDATA[]]></hint>
+<source><![CDATA[SQL]]></source>
+		<solution language="SQL(sqlite3)"><![CDATA[insert into user values(100,'guest',22);
+;
+select id,username,age from user where id=100;]]></solution>
+				<append language="SQL(sqlite3)"><![CDATA[;
+select id,username,age from user where id=100;]]></append>
+		</item>
+<item>
+<title><![CDATA[Update]]></title>
+<time_limit unit="s"><![CDATA[1]]></time_limit>
+<memory_limit unit="mb"><![CDATA[128]]></memory_limit>
+
+<description><![CDATA[<span style="color:#333333;font-size:14px;background-color:#FFFFFF;font-family:&quot;">user表结构&nbsp;</span><br />
+<br />
+<table cellpadding="2" cellspacing="0" border="1" bordercolor="#000000" style="color:#333333;font-family:&quot;font-size:14px;background-color:transparent;width:454px;">
+	<tbody>
+		<tr>
+			<td>
+				列名<br />
+			</td>
+			<td>
+				类型
+			</td>
+			<td>
+				说明
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span style="font-family:&quot;font-size:14px;background-color:#FFFFFF;">id</span><br />
+			</td>
+			<td>
+				<span style="font-family:&quot;font-size:14px;background-color:#FFFFFF;">&nbsp;int&nbsp;</span><br />
+			</td>
+			<td>
+				编号
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span style="font-family:&quot;font-size:14px;background-color:#FFFFFF;">username&nbsp;</span><br />
+			</td>
+			<td>
+				<span style="font-family:&quot;font-size:14px;background-color:#FFFFFF;">varchar(20)&nbsp;</span><br />
+			</td>
+			<td>
+				用户名
+			</td>
+		</tr>
+		<tr>
+			<td>
+				age
+			</td>
+			<td>
+				int
+			</td>
+			<td>
+				年龄<br />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				wages
+			</td>
+			<td>
+				decimal(16&#44;2)
+			</td>
+			<td>
+				工资
+			</td>
+		</tr>
+	</tbody>
+</table>
+<span><span style="font-size:14px;background-color:#FFFFFF;"><br />
+</span></span>
+
+	<span style="color:#333333;font-size:14px;background-color:#FFFFFF;font-family:&quot;"><span>请用sql语句给tom工资增加1000</span></span>
+<br />]]></description>
+<input><![CDATA[]]></input> 
+<output><![CDATA[]]></output>
+<sample_input><![CDATA[drop table user;
+create table user(id int,username char(10),age int,wages decimal(16,2));
+insert into user values(2,'tom',19,2019.41);
+
+]]></sample_input>
+<sample_output><![CDATA[3019.41
+]]></sample_output>
+  <test_input><![CDATA[drop table user;
+create table user(id int,username char(10),age int,wages decimal(16,2));
+insert into user values(1,'jerry',19,2018.95);
+insert into user values(2,'tom',19,2018.95);
+
+]]></test_input>
+<test_output><![CDATA[2018.95
+3018.95]]></test_output>
+<hint><![CDATA[]]></hint>
+<source><![CDATA[]]></source>
+		<solution language="SQL(sqlite3)"><![CDATA[update user set wages=wages+1000 where username='tom';
+select wages from user order by id ;]]></solution>
+				<append language="SQL(sqlite3)"><![CDATA[select wages from user order by id ;]]></append>
+		</item>
+</fps>
