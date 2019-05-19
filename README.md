@@ -1,7 +1,8 @@
 # freeproblemset
-Automatically exported from code.google.com/p/freeproblemset
 
-如果您愿意分享原创题目，请联系我，或直接将导出为fps格式的题目发我，我将上传到Downloads中供ACMer们下载使用。newsclan(a)gmail.com
+a.k.a fps 是一种开放式ACM/ICPC/NOIP题目存储、转换标准，目前有HUSTOJ/OpenJudger/QDUOJ等系统兼容这种格式的导入导出。
+
+如果您愿意分享原创题目，请联系我，或直接将导出为fps格式的题目发我，我将上传到fps-examples中供ACMer们下载使用。newsclan(a)gmail.com
 
     上传题目前请做好测试，用hustoj的liveCD导入，正常AC的再上传。
     Downloads中已有400余题，下载时请注意标签，避免重复导入。最好先在HUSTOJ-LiveCD做测试。
