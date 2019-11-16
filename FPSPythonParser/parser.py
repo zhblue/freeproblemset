@@ -137,7 +137,7 @@ if __name__ == "__main__":
     problems = parser.parse()
     for index, problem in enumerate(problems):
         path = os.path.join("/tmp/", str(index + 1))
-        os.mkdir(path)
+        os.makedirs(path)
         helper.save_test_case(problem, path)
 
         pprint.pprint(helper.save_image(problem, "/tmp", "/static/img"))
