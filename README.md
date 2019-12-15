@@ -45,7 +45,7 @@ For now it's designed for hustoj (on googlecode),but it should be usable for oth
 4、裁判(可选)
 5、标程(可选)
 
-最新格式可以在TransportFileDefinition中看到，欢迎讨论和建议。
+最新格式可以在[DTD](fps.current.dtd)中看到，欢迎讨论和建议。
 
 因为个人的原因，以 [HUSTOJ](https://github.com/zhblue/hustoj) 为原型系统，建立导入/导出功能，因此本项目的主要工作是制定数据格式，相应的代码工作在HUSTOJ中完成。
 
