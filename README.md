@@ -59,4 +59,6 @@ For now it's designed for hustoj (on googlecode),but it should be usable for oth
 
 需要题目资源，请访问[TK题库](http://tk.hustoj.com/)
 
+之前在GoogleCode共享的题库可通过，[谷歌历史镜像](https://code.google.com/archive/p/freeproblemset/downloads)下载，自备网络通信工具。
+
 本项目期待您的加入…… 联系我10982766@企鹅.com
