@@ -30,5 +30,9 @@
 <!ELEMENT img (src+,base64+)>
 <!ELEMENT item 
 (title+,time_limit+,memory_limit+,memory_limit+,description+,input?,output?,sample_input+,sample_output+,hint?,source?,solution*,prepend*,template*,append*,spj?)>
-<!ELEMENT fps (item*)>
-
+<!ELEMENT generator (#PCDATA)>
+<!ATTLIST generator name CDATA #REQUIRED> 
+<!ATTLIST generator url CDATA #IMPLIED> 
+<!ELEMENT fps (generator*,item*)>
+<!ATTLIST fps version CDATA #IMPLIED>
+<!ATTLIST fps url CDATA #IMPLIED>
