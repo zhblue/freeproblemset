@@ -2,6 +2,8 @@
 
 a.k.a fps 是一种开放式([LGPL](lgpl-3.0.txt))ACM/ICPC/NOIP题目存储、转换标准，目前有HUSTOJ/OpenJudger/QDUOJ等系统兼容这种格式的导入导出。
 
+快速理解：看这个例子(https://github.com/zhblue/freeproblemset/blob/master/fps-zhblue-A%2BB.xml)
+
 开源授权：
 如果您的软件准确的兼容本格式的导入导出，不会对软件的开源与否、开源协议的选择构成任何要求。
 如果您要在本格式的基础上进行修改、增减要求，衍生出新的格式，则要求新的格式必须采用与本格式相同的授权方式([LGPL](lgpl-3.0.txt))，并提供至少一种开源([LGPL](lgpl-3.0.txt)/GPL)实现。
