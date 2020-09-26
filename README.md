@@ -1,6 +1,16 @@
 # freeproblemset
 
-a.k.a fps 是一种开放式([LGPL](lgpl-3.0.txt))ACM/ICPC/NOIP题目存储、转换标准，目前有HUSTOJ/OpenJudger/QDUOJ等系统兼容这种格式的导入导出。
+a.k.a fps 是一种开放式([LGPL](lgpl-3.0.txt))ACM/ICPC/NOIP题目存储、转换标准，目前有
+
+[HUSTOJ](https://github.com/zhblue/hustoj)
+
+[Hydro](https://hydro.js.org/)
+
+[OpenJudger](https://github.com/Azure99/OpenJudger)
+
+[QDUOJ](https://github.com/QingdaoU/OnlineJudge)
+       
+       等系统兼容这种格式的导入导出。
 
 快速理解：看这个例子(https://github.com/zhblue/freeproblemset/blob/master/fps-zhblue-A%2BB.xml)
 
