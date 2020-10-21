@@ -9,13 +9,14 @@ import xml.etree.ElementTree as ET
 class FPSParser(object):
     def __init__(self, fps_path):
         self.fps_path = fps_path
+        self.version = None
 
     @property
     def _root(self):
         root = ET.ElementTree(file=self.fps_path).getroot()
-        version = root.attrib.get("version", "No Version")
-        if version not in ["1.1", "1.2"]:
-            raise ValueError("Unsupported version '" + version + "'")
+        self.version = root.attrib.get("version", "No Version")
+        if self.version not in ["1.1", "1.2"]:
+            raise ValueError("Unsupported version '" + self.version + "'")
         return root
 
     def parse(self):
@@ -45,7 +46,11 @@ class FPSParser(object):
                 if unit not in ["s", "ms"]:
                     raise ValueError("Invalid time limit unit")
                 problem["time_limit"]["unit"] = item.attrib.get("unit", "s")
-                value = int(item.text)
+                value = 0
+                if self.version != "1.1":
+                    value = float(item.text)
+                else:
+                    value = int(item.text)
                 if value <= 0:
                     raise ValueError("Invalid time limit value")
                 problem["time_limit"]["value"] = value
