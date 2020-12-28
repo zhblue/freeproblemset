@@ -13,6 +13,10 @@
 <!ELEMENT output (#PCDATA)>
 <!ELEMENT sample_input (#PCDATA)>
 <!ELEMENT sample_output (#PCDATA)>
+<!ELEMENT test_input (#PCDATA)>
+<!ATTLIST test_input name CDATA #IMPLIED> 
+<!ELEMENT test_output (#PCDATA)>
+<!ATTLIST test_output name CDATA #IMPLIED> 
 <!ELEMENT hint (#PCDATA)>
 <!ELEMENT source (#PCDATA)>
 <!ELEMENT solution (#PCDATA)>
@@ -29,7 +33,7 @@
 <!ELEMENT base64 (#PCDATA)>
 <!ELEMENT img (src+,base64+)>
 <!ELEMENT item 
-(title+,time_limit+,memory_limit+,memory_limit+,description+,input?,output?,sample_input+,sample_output+,hint?,source?,solution*,prepend*,template*,append*,spj?)>
+(title+,time_limit+,memory_limit+,memory_limit+,description+,input?,output?,sample_input+,sample_output+,test_input+,test_output+,hint?,source?,solution*,prepend*,template*,append*,spj?)>
 <!ELEMENT generator (#PCDATA)>
 <!ATTLIST generator name CDATA #REQUIRED> 
 <!ATTLIST generator url CDATA #IMPLIED> 
