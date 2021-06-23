@@ -29,6 +29,8 @@
 <!ATTLIST append language CDATA #REQUIRED> 
 <!ELEMENT spj (#PCDATA)>
 <!ATTLIST spj language CDATA #REQUIRED> 
+<!ELEMENT tpj (#PCDATA)>
+<!ATTLIST tpj language CDATA #REQUIRED> 
 <!ELEMENT src (#PCDATA)>
 <!ELEMENT base64 (#PCDATA)>
 <!ELEMENT img (src+,base64+)>
