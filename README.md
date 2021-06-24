@@ -69,7 +69,7 @@ For now it's designed for hustoj (on googlecode),but it should be usable for oth
 
 目前HUSTOJ已经可以进行题目和测试数据的导出。
 
-需要题目资源，请访问[TK题库](http://tk.hustoj.com/)
+需要题目资源，请访问[TK题库](http://tk.hustoj.com/) 有上千道免费题目可以下载。
 
 之前在GoogleCode共享的题库可通过，[谷歌历史镜像](https://code.google.com/archive/p/freeproblemset/downloads)下载，自备网络通信工具。
 
