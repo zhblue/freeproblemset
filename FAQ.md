@@ -8,4 +8,10 @@ FAQ on fps
 2、如果超过100M,可以先用EasyFPSViewer拆分成多个小文件，然后再导入。
 3、对于HUSTOJ，可以先压缩为zip再上传导入
 
-
+特殊元素说明
+--
+append是自动加在学生代码后面的代码，prepend是前面。
+solution是给管理员、老师用的参考程序。
+template是提交时直接给学生看的，用来做程序填空题的模板。
+spj是基于HUSTOJ规范的special judge程序
+tpj是基于testlib.h规范的special judge程序
