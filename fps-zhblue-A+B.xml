@@ -170,6 +170,12 @@ public class Main
 		}
 	}
 }]]></solution>
+		<solution language="PHP"><![CDATA[<?php
+$input = stream_get_contents(STDIN);
+list($a, $b) = explode(' ', $input);
+echo $a + $b;
+]]></solution>
+		
 				<prepend language="Java"><![CDATA[import java.io.*;
 
 import java.util.*;
@@ -195,12 +201,13 @@ public class Main
             }
 
 }]]></append>
-					<template language="Python"><![CDATA[a = input()
-a = a.split()
-b = []
-for i in a:
-        b.append(int(i))
-print (sum(b))
+					<template language="Python"><![import io
+import sys
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8')
+for line in sys.stdin:
+    a = line.split()
+    print(int(a[0]) + int(a[1]))
+
 ]]></template>
 					<template language="C#"><![CDATA[using System;
  
