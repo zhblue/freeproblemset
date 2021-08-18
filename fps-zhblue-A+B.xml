@@ -175,6 +175,16 @@ $input = stream_get_contents(STDIN);
 list($a, $b) = explode(' ', $input);
 echo $a + $b;
 ]]></solution>
+		<solution language="Fortran">PROGRAM P1000
+			
+IMPLICIT NONE
+INTEGER :: A, B
+ 
+READ(*,*) A, B
+WRITE(*, '(I0)') A + B
+ 
+END PROGRAM P1000
+		</solution>
 		
 				<prepend language="Java"><![CDATA[import java.io.*;
 
