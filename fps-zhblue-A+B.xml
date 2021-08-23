@@ -211,7 +211,7 @@ public class Main
             }
 
 }]]></append>
-					<template language="Python"><![import io
+					<template language="Python"><![CDATA[import io
 import sys
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8')
 for line in sys.stdin:
