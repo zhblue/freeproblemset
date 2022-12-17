@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT title (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
 <!ELEMENT time_limit (#PCDATA)>
 <!ATTLIST time_limit
     unit CDATA #IMPLIED
