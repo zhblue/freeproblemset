@@ -7,7 +7,7 @@
 	<item>
 <title><![CDATA[A+B Problem]]></title>
 <url><![CDATA[http://demo.hustoj.com/problem.php?id=1000]]></url>
-<time_limit unit="s"><![CDATA[1]]></time_limit>
+<time_limit unit="s"><![CDATA[1.00]]></time_limit>
 <memory_limit unit="mb"><![CDATA[256]]></memory_limit>
 
 <description><![CDATA[<p>
