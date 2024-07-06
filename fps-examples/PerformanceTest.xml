@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<!DOCTYPE fps PUBLIC 
+  "-//freeproblemset//An opensource XML standard for AlgorithmContest Problem Set//EN"
+  "http://hustoj.com/fps.current.dtd" >
+<fps version="1.4" url="https://github.com/zhblue/freeproblemset/">
+	<generator name="HUSTOJ" url="https://github.com/zhblue/hustoj/"/>
+	<item>
+<title><![CDATA[A+B Problem]]></title>
+<url><![CDATA[http://demo.hustoj.com/problem.php?id=1000]]></url>
+<time_limit unit="s"><![CDATA[1.000]]></time_limit>
+<memory_limit unit="mb"><![CDATA[256]]></memory_limit>
+
+<description><![CDATA[<p>
+	Calculate a+b
+</p>]]></description>
+<input><![CDATA[<p>
+	Two integer a,b (0&lt;=a,b&lt;=10)
+</p>]]></input> 
+<output><![CDATA[<p>
+	Output a+b
+</p>]]></output>
+<sample_input><![CDATA[1 2]]></sample_input>
+<sample_output><![CDATA[3]]></sample_output>
+  <test_input name="test_01"><![CDATA[1 2
+
+]]></test_input>
+<test_output name="test_01"><![CDATA[3
+]]></test_output>
+<test_input><![CDATA[500 17
+]]></test_input>
+<test_output><![CDATA[517]]></test_output>
+<test_input><![CDATA[2 3
+]]></test_input>
+<test_output><![CDATA[5
+]]></test_output>
+<hint><![CDATA[<p>
+	Q: Where are the input and the output? A: Your program shall always <span>read input from stdin (Standard Input) and write output to stdout (Standard Output)</span>. For example, you can use 'scanf' in C or 'cin' in C++ to read from stdin, and use 'printf' in C or 'cout' in C++ to write to stdout. You <span>shall not output any extra data</span> to standard output other than that required by the problem, otherwise you will get a "Wrong Answer". User programs are not allowed to open and read from/write to files. You will get a "Runtime Error" or a "Wrong Answer" if you try to do so. Here is a sample solution for problem 1000 using C++/G++:
+</p>
+<pre>#include &lt;iostream&gt;
+using namespace std;
+int  main()
+{
+    int a,b;
+    cin &gt;&gt; a &gt;&gt; b;
+    cout &lt;&lt; a+b &lt;&lt; endl;
+    return 0;
+}</pre>
+<p>
+	It's important that the return type of main() must be int when you use G++/GCC,or you may get compile error. Here is a sample solution for problem 1000 using C/GCC:
+</p>
+<pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a,b;
+    scanf("%d %d",&amp;a, &amp;b);
+    printf("%d\n",a+b);
+    return 0;
+}</pre>
+<p>
+	Here is a sample solution for problem 1000 using PASCAL:
+</p>
+<pre>program p1000(Input,Output); 
+var 
+  a,b:Integer; 
+begin 
+   Readln(a,b); 
+   Writeln(a+b); 
+end.</pre>
+<p>
+	Here is a sample solution for problem 1000 using JAVA: Now java compiler is jdk 1.5, next is program for 1000
+</p>
+<pre>import java.io.*;
+import java.util.*;
+public class Main
+{
+            public static void main(String args[]) throws Exception
+            {
+                    Scanner cin=new Scanner(System.in);
+                    int a=cin.nextInt();
+                    int b=cin.nextInt();
+                    System.out.println(a+b);
+            }
+}</pre>
+<p>
+	Old program for jdk 1.4
+</p>
+<pre>import java.io.*;
+import java.util.*;
+
+public class Main
+{
+    public static void main (String args[]) throws Exception
+    {
+        BufferedReader stdin = 
+            new BufferedReader(
+                new InputStreamReader(System.in));
+
+        String line = stdin.readLine();
+        StringTokenizer st = new StringTokenizer(line);
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        System.out.println(a+b);
+    }
+}</pre>]]></hint>
+<source><![CDATA[系统原理，熟悉OJ]]></source>
+		<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+				<template language="C"><![CDATA[#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    printf("%d",a+b);
+    return 0;
+}
+]]></template>
+				<solution language="C++"><![CDATA[#include <iostream>
+#include <cstdio>
+using namespace std;
+int main()
+{
+#ifndef ONLINE_JUDGE
+	freopen("in.txt","r",stdin);
+#endif
+	int a,b;
+	while(cin >>a >>b)
+	{
+		cout <<a+b <<endl;
+	}
+	return 0;
+}]]></solution>
+				<template language="C++"><![CDATA[#include <iostream>
+using namespace std;
+int main(){
+    int a,b;
+    while(cin >> a >> b)
+        cout << a+b << endl;
+	return 0;
+}
+]]></template>
+
+		<solution language="C++"><![CDATA[
+		#include<cstdio>
+using namespace std;
+int main(){
+    int a=1000000000,b=1;
+    while(a)b<<=1,a--;
+    printf("%d\\n",b);
+    return 0;
+}
+		]]></solution>
+		<solution language="C++"><![CDATA[
+		#include<cstdio>
+using namespace std;
+const int MX=50000000;
+int p[MX],m[MX],pc;
+int main(){
+    for(int i=2;i<MX;i++){
+        if(!m[i])p[++pc]=m[i]=i;
+        static int k;
+        for(int j=1;j<=pc&&p[j]<=m[i]&&(k=p[j]*i)<MX;j++)m[k]=p[j];
+    }
+    int ans=0;
+    for(int i=1;i<=pc;i++)ans^=p[i];
+    printf("%d\\n",ans);
+    return 0;
+}
+		]]></solution>
+		<solution language="C++"><![CDATA[
+		#include<cstdio>
+using namespace std;
+const int MX=1000;
+int G[MX][MX];
+int sed=0;
+inline int rand(){return sed=(sed*sed*73+sed*233+19260817)&0x0000ffff;}
+int main(){
+    for(int i=0;i<MX;i++)
+        for(int j=0;j<MX;j++)
+            G[i][j]=rand();
+    for(int i=0;i<MX;i++)
+        for(int j=0;j<MX;j++)
+            for(int k=0;k<MX;k++)
+                if(G[j][k]>G[j][i]+G[i][k])G[j][k]=G[j][i]+G[i][k];
+    int ans=0;
+    for(int i=0;i<MX;i++)
+        for(int j=0;j<MX;j++)
+            ans^=G[i][j];
+    printf("%d\\n",ans);
+    return 0;
+}
+		]]></solution>
+		<solution language="C++"><![CDATA[
+		#include<cstdio>
+#include<algorithm>
+#include<set>
+using namespace std;
+const int MX=1000000;
+int sed=0;
+inline int rand(){return sed=(sed*sed*73+sed*233+19260817);}
+int main(){
+    set<int>S;
+    for(int i=0;i<MX;i++)S.insert(rand());
+    int ans=0;
+    for(set<int>::iterator it=S.begin();it!=S.end();it++)ans^=*it;
+    printf("%d\\n",ans);
+    return 0;
+}
+		]]></solution>
+		<solution language="C++"><![CDATA[
+		#include<cstdio>
+using namespace std;
+const int MX=1<<25;
+int a[MX];
+inline unsigned int rand(){static unsigned int sed=0;return (sed=(sed*233+19260421))&(MX-1);}
+int main(){
+    for(int i=0;i<MX;i++)a[rand()]=i;
+    return 0;
+}
+		]]></solution>
+		<solution language="C++"><![CDATA[
+		#include<cstdio>
+using namespace std;
+const int MX=1<<25;
+int a[MX];
+inline unsigned int rand(){static unsigned int sed=0;return (sed=(sed*(MX+1)+1025))&(MX-1);}
+int main(){
+    for(int i=0;i<MX;i++)a[rand()]=i;
+    return 0;
+}
+		]]></solution>
+		<solution language="C++"><![CDATA[
+		#include<cstdio>
+using namespace std;
+const int MX=1<<25;
+int a[MX];
+inline unsigned int rand(){static unsigned int sed=0;return (sed=(sed*(MX+1)+1))&(MX-1);}
+int main(){
+    for(int i=0;i<MX;i++)a[rand()]=i;
+    return 0;
+}
+		]]></solution>
+		<solution language="C++"><![CDATA[
+	#include<cstdio>
+using namespace std;
+typedef unsigned long long ull;
+#define P 1000000007
+const int MX=100000000;
+int main(){
+    ull ans=1;
+    for(int i=1;i<MX;i++)ans=ans*i%P;
+    printf("%llu\\n",ans);
+    return 0;
+}	
+		]]></solution>
+		<solution language="C++"><![CDATA[
+		#include<cstdio>
+using namespace std;
+typedef unsigned long long ull;
+int P=1000000007;
+const int MX=100000000;
+int main(){
+    ull ans=1;
+    for(int i=1;i<MX;i++)ans=ans*i%P;
+    printf("%llu\\n",ans);
+    return 0;
+}
+		]]></solution>
+		<solution language="C++"><![CDATA[
+		#include<cstdio>
+using namespace std;
+const int MX=20000000;
+int main(){
+    double ans=0.61234567898765,t=1,s=0;
+    for(int i=1;i<MX;i++)s+=(t*=ans);
+    printf("%f\\n",s);
+    return 0;
+}
+		]]></solution>
+		<solution language="C++"><![CDATA[
+		#include<cstdio>
+using namespace std;
+typedef unsigned int uint;
+const int MX=1<<10;
+uint a[MX][MX],b[MX][MX];
+inline uint rand(){static unsigned int sed=0;return (sed=(sed*233+19260421))&(MX-1);}
+int main(){
+    register int i,j,k;
+    for(i=0;i<MX;i++)
+        for(j=0;j<MX;j++)
+            a[i][j]=rand();
+    #define A(t) (b[i][k+t]+=a[i][j]*a[j][k+t])
+    for(i=0;i<MX;i++)
+        for(j=0;j<MX;j++)
+            for(k=0;k<MX;k++)
+                A(0);
+    #undef A
+    uint s;
+    for(i=0;i<MX;i++)
+        for(j=0;j<MX;j++)
+            s+=a[i][j];
+    printf("%u\\n",s);
+    return 0;
+}
+		]]></solution>
+		<solution language="C++"><![CDATA[
+		#include<cstdio>
+using namespace std;
+typedef unsigned int uint;
+const int MX=1<<10;
+uint a[MX][MX],b[MX][MX];
+inline uint rand(){static unsigned int sed=0;return (sed=(sed*233+19260421))&(MX-1);}
+int main(){
+    register int i,j,k;
+    for(i=0;i<MX;i++)
+        for(j=0;j<MX;j++)
+            a[i][j]=rand();
+    #define A(t) (b[i][k+t]+=a[i][j]*a[j][k+t])
+    for(i=0;i<MX;i++)
+        for(j=0;j<MX;j++)
+            for(k=0;k<MX;k+=8)
+                A(0),A(1),A(2),A(3),A(4),A(5),A(6),A(7);
+    #undef A
+    uint s;
+    for(i=0;i<MX;i++)
+        for(j=0;j<MX;j++)
+            s+=a[i][j];
+    printf("%u\\n",s);
+    return 0;
+}
+		]]></solution>
+		
+	</item>
+</fps>
