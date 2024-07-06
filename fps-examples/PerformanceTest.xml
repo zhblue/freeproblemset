@@ -338,6 +338,1005 @@ int main(){
     return 0;
 }
 		]]></solution>
-		
+		<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
+<solution language="C"><![CDATA[#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n",a+b);
+	}
+	return 0;
+}]]></solution>
 	</item>
 </fps>
