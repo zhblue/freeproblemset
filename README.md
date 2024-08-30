@@ -20,9 +20,9 @@ a.k.a fps 是一种开放式([LGPL](lgpl-3.0.txt))ACM/ICPC/NOIP题目存储、�
 
 如果您愿意分享原创题目，请联系我，或直接将导出为fps格式的题目发我，我将上传到fps-examples中供ACMer们下载使用。newsclan(a)gmail.com
 
-    上传题目前请做好测试，用hustoj的liveCD导入，正常AC的再上传。
-    fps-examples中已有2500+题，下载时请注意标签，避免重复导入。最好先在HUSTOJ-LiveCD做测试。
-    新增Java编写的FPS文件题目查看器，需要安装JRE，Windows中暂不支持中文路径。 
+上传题目前请做好测试，用[hustoj的liveCD](http://cdn.m.hustoj.com:8090/)导入，正常AC的再上传。
+fps-examples中已有2500+题，下载时请注意标签，避免重复导入。最好先在HUSTOJ-LiveCD做测试。
+新增Java编写的FPS文件题目查看器，需要安装JRE，Windows中暂不支持中文路径。 
 
 There is many free ACM/ICPC Online Judge System available. But not so much problemset available.
 
