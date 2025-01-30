@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fps PUBLIC 
+  "-//freeproblemset//An opensource XML standard for Algorithm Contest Problem Set//EN"
+  "http://hustoj.com/fps.current.dtd" >
+
+<fps version="1.5" url="https://github.com/zhblue/freeproblemset/">
+  <generator name="HUSTOJ" url="https://github.com/zhblue/hustoj/" />
+  
+  <item>
+    <title><![CDATA[魔术师的交换谜题]]></title>
+    <url><![CDATA[http://zjicm.hustoj.com/problem.php?id=6917]]></url>
+    <time_limit unit="s"><![CDATA[1]]></time_limit>
+
+    <memory_limit unit="mb"><![CDATA[128]]></memory_limit>
+
+    
+    <description><![CDATA[<span class='md'>
+### 题目名称：魔术师的交换谜题
+
+#### 题目背景
+
+刘谦在2025年春晚表演的魔术《画蛇添福》通过一系列精心设计的交换步骤，使得杯子必然出现在最右侧。现在，你需要编写程序模拟这一过程，验证其数学规律。
+
+------
+
+#### 问题描述
+
+给定三个物品（`C`-杯子、`S`-勺子、`K`-筷子）的初始排列，按照以下步骤操作：
+
+- 1.将筷子和它左边相邻的东西互相交换位置，如果筷子已经在最左边，就不需要操作 
+
+- 2.将杯子和它右边相邻的东西互相交换位置，如果杯子已经在最右边，就不需要操作 
+
+- 3.将勺子和它左边相邻的东西互相交换位置，如果勺子已经在最左边，就不需要操作
+
+最终输出操作后的排列
+
+**输入格式**  
+一个长度为 3 的字符串，包含且仅包含 'C'、'S'、'K'。
+
+**输出格式**  
+应用步骤后的最终排列字符串。
+
+**输入样例**  
+CSK
+
+**输出样例**  
+KSC
+</span>]]></description>
+    <input><![CDATA[]]></input> 
+    <output><![CDATA[]]></output>
+    <sample_input><![CDATA[]]></sample_input>
+    <sample_output><![CDATA[]]></sample_output>
+    <test_input name="1"><![CDATA[CSK]]></test_input>
+<test_output name="1"><![CDATA[KSC
+]]></test_output>
+<test_input name="2"><![CDATA[CKS]]></test_input>
+<test_output name="2"><![CDATA[SKC
+]]></test_output>
+<test_input name="3"><![CDATA[SCK]]></test_input>
+<test_output name="3"><![CDATA[SKC
+]]></test_output>
+<test_input name="4"><![CDATA[SKC]]></test_input>
+<test_output name="4"><![CDATA[SKC
+]]></test_output>
+<test_input name="5"><![CDATA[KCS]]></test_input>
+<test_output name="5"><![CDATA[SKC
+]]></test_output>
+<test_input name="6"><![CDATA[KSC]]></test_input>
+<test_output name="6"><![CDATA[SKC
+]]></test_output>
+    <hint><![CDATA[]]></hint>
+    <source><![CDATA[2025春节]]></source>
+    <remote_oj><![CDATA[]]></remote_oj>
+    <remote_id><![CDATA[]]></remote_id>
+
+            <solution language="C++"><![CDATA[#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+    
+    // 步骤1：筷子（K）左移
+    int kPos = s.find('K');
+    if (kPos > 0) {
+        // 交换 s[kPos] 和 s[kPos-1]
+        char temp = s[kPos];
+        s[kPos] = s[kPos - 1];
+        s[kPos - 1] = temp;
+    }
+    
+    // 步骤2：杯子（C）右移
+    int cPos = s.find('C');
+    if (cPos < 2) {
+        // 交换 s[cPos] 和 s[cPos+1]
+        char temp = s[cPos];
+        s[cPos] = s[cPos + 1];
+        s[cPos + 1] = temp;
+    }
+    
+    // 步骤3：勺子（S）左移
+    int sPos = s.find('S');
+    if (sPos > 0) {
+        // 交换 s[sPos] 和 s[sPos-1]
+        char temp = s[sPos];
+        s[sPos] = s[sPos - 1];
+        s[sPos - 1] = temp;
+    }
+    
+    cout << s << endl;
+    return 0;
+}]]></solution>
+    
+</item>
+
+</fps>
