@@ -21,3 +21,7 @@ template是提交时直接给学生看的，用来做程序填空题的模板。
 spj是基于HUSTOJ规范的special judge程序
 
 tpj是基于testlib.h规范的special judge程序
+
+remote_oj 是用于远程判题的宿主机标识，hustoj中会调用include/remote_xxx.php来评测标识为xxx的远程题，通常由宿主服务器管理员导出题目时手工填写。
+
+remote_id 是用于远程判题的题目序号，这个序号是宿主机上同个题目的标识，一般不改动。
