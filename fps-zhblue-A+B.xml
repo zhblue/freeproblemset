@@ -22,7 +22,6 @@
 <sample_input><![CDATA[1 2]]></sample_input>
 <sample_output><![CDATA[3]]></sample_output>
   <test_input name="test_01"><![CDATA[1 2
-
 ]]></test_input>
 <test_output name="test_01"><![CDATA[3
 ]]></test_output>
@@ -48,15 +47,16 @@ int  main()
 <p>
 	It's important that the return type of main() must be int when you use G++/GCC,or you may get compile error. Here is a sample solution for problem 1000 using C/GCC:
 </p>
-<pre>#include &lt;stdio.h&gt;
-
-int main()
-{
+[code lang=c]
+#include <stdio.h>
+int main(){
     int a,b;
-    scanf("%d %d",&amp;a, &amp;b);
-    printf("%d\n",a+b);
+    while(scanf("%d %d",&a, &b) != EOF){
+        printf("%d\n",a + b);
+    }
     return 0;
-}</pre>
+} 
+[/code]
 <p>
 	Here is a sample solution for problem 1000 using PASCAL:
 </p>
@@ -341,3 +341,4 @@ func main() {
 }]]></solution>
 	</item>
 </fps>
+
