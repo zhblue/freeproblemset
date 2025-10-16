@@ -25,7 +25,7 @@ const char * tail="</item>\n</fps>\n";
 		char buf [bsize] ;
 		char * endpoint;
 		int cp=0;
-		sprintf(filename,"fps_%d.xml",num);
+		sprintf(filename,"%s_%d.xml",argv[1],num);
 		FILE * outfile=fopen(filename,"w");
 		while(fgets(buf,bsize,infile)!=NULL){
 			    location+=strlen(buf);
@@ -43,7 +43,7 @@ const char * tail="</item>\n</fps>\n";
 					fprintf(outfile,"%s",tail);
 					fclose(outfile);
 					num++;
-					sprintf(filename,"fps_%d.xml",num);
+					sprintf(filename,"%s_%d.xml",argv[1],num);
 					outfile=fopen(filename,"w");
 					fprintf(outfile,"%s",head1);
 					fprintf(outfile,"%s",head2);
