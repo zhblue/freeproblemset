@@ -3,11 +3,11 @@
 <!ELEMENT url (#PCDATA)>
 <!ELEMENT time_limit (#PCDATA)>
 <!ATTLIST time_limit
-    unit CDATA #IMPLIED
+ unit CDATA #IMPLIED
 >
 <!ELEMENT memory_limit (#PCDATA)>
 <!ATTLIST memory_limit
-    unit CDATA #IMPLIED
+ unit CDATA #IMPLIED
 >
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT input (#PCDATA)>
@@ -15,35 +15,37 @@
 <!ELEMENT sample_input (#PCDATA)>
 <!ELEMENT sample_output (#PCDATA)>
 <!ELEMENT test_input (#PCDATA)>
-<!ATTLIST test_input name CDATA #IMPLIED> 
+<!ATTLIST test_input name CDATA #IMPLIED>
 <!ELEMENT test_output (#PCDATA)>
-<!ATTLIST test_output name CDATA #IMPLIED> 
+<!ATTLIST test_output name CDATA #IMPLIED>
 <!ELEMENT hint (#PCDATA)>
 <!ELEMENT source (#PCDATA)>
 <!ELEMENT solution (#PCDATA)>
-<!ATTLIST solution language CDATA #REQUIRED> 
+<!ATTLIST solution language CDATA #REQUIRED>
 <!ELEMENT prepend (#PCDATA)>
-<!ATTLIST prepend language CDATA #REQUIRED> 
+<!ATTLIST prepend language CDATA #REQUIRED>
 <!ELEMENT template (#PCDATA)>
-<!ATTLIST template language CDATA #REQUIRED> 
+<!ATTLIST template language CDATA #REQUIRED>
 <!ELEMENT append (#PCDATA)>
-<!ATTLIST append language CDATA #REQUIRED> 
+<!ATTLIST append language CDATA #REQUIRED>
 <!ELEMENT spj (#PCDATA)>
-<!ATTLIST spj language CDATA #REQUIRED> 
+<!ATTLIST spj language CDATA #IMPLIED>
 <!ELEMENT tpj (#PCDATA)>
-<!ATTLIST tpj language CDATA #REQUIRED> 
+<!ATTLIST tpj language CDATA #IMPLIED>
+<!ELEMENT interactor (#PCDATA)>
+<!ATTLIST interactor language CDATA #IMPLIED>
 <!ELEMENT src (#PCDATA)>
 <!ELEMENT base64 (#PCDATA)>
 <!ELEMENT img (src+,base64+)>
 <!ELEMENT remote_oj (#PCDATA)>
 <!ELEMENT remote_id (#PCDATA)>
 
-<!ELEMENT item 
-(title+,url?,time_limit+,memory_limit+,description+,input?,output?,sample_input*,sample_output*,test_input*,test_output*,hint?,source?,solution*,prepend*,template*,append*,spj?,tpj?,remote_oj?,remote_id?,img*)>
+<!ELEMENT item
+(title+,url?,time_limit+,memory_limit+,description+,input?,output?,sample_input*,sample_output*,test_input*,test_output*,hint?,source?,solution*,prepend*,template*,append*,spj?,tpj?,interactor?,remote_oj?,remote_id?,img*)>
 
 <!ELEMENT generator (#PCDATA)>
-<!ATTLIST generator name CDATA #REQUIRED> 
-<!ATTLIST generator url CDATA #IMPLIED> 
+<!ATTLIST generator name CDATA #REQUIRED>
+<!ATTLIST generator url CDATA #IMPLIED>
 <!ELEMENT fps (generator*,item*)>
 <!ATTLIST fps version CDATA #IMPLIED>
 <!ATTLIST fps url CDATA #IMPLIED>
