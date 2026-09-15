@@ -648,7 +648,7 @@ def prompt(msg: str, default: Optional[str] = None) -> str:
 
 def main(argv: Optional[list[str]] = None) -> int:
     parser = argparse.ArgumentParser(
-        prog="convert_to_fps",
+        prog="convert_hydro_to_fps",
         description="把 hydro 格式题目目录批量转 FPS (freeproblemset) XML。",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""\
@@ -664,7 +664,7 @@ def main(argv: Optional[list[str]] = None) -> int:
       --url-base "http://demo.hustoj.com/problem.php?id=" --url-start 9569
 
   # 交互模式
-  python3 convert_to_fps.py --interactive
+  python3 convert_hydro_to_fps.py --interactive
 """,
     )
     parser.add_argument("source_dir", nargs="?", help="题目根目录（含子目录，每个子目录一题）")
