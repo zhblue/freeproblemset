@@ -17,13 +17,13 @@
 
 用法:
   # 命令行
-  python3 convert_to_fps.py <source_dir> [output_dir] [options]
+  python3 convert_hydro_to_fps.py <source_dir> [output_dir] [options]
 
   # 交互模式（提示输入）
-  python3 convert_to_fps.py --interactive
+  python3 convert_hydro_to_fps.py --interactive
 
   # 管道（输出到 stdout）
-  python3 convert_to_fps.py <source_dir> - | less
+  python3 convert_hydro_to_fps.py <source_dir> - | less
 
 FPS 格式参考: https://github.com/zhblue/freeproblemset/blob/master/fps.current.dtd
 """
@@ -654,13 +654,13 @@ def main(argv: Optional[list[str]] = None) -> int:
         epilog="""\
 示例:
   # 默认 (fields 风格，输出到 <source_dir>/fps/)
-  python3 convert_to_fps.py ./GESP202609-C++编程题
+  python3 convert_hydro_to_fps.py ./GESP202609-C++编程题
 
   # HUSTOJ 风格（description 装整段 markdown，前端 JS 渲染）
-  python3 convert_to_fps.py ./problems --style hustoj
+  python3 convert_hydro_to_fps.py ./problems --style hustoj
 
   # 指定输出目录 + 给所有题目加上 OJ url
-  python3 convert_to_fps.py ./problems ./out \\
+  python3 convert_hydro_to_fps.py ./problems ./out \\
       --url-base "http://demo.hustoj.com/problem.php?id=" --url-start 9569
 
   # 交互模式
